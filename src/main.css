@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'font';
+  src: url('../public/font.woff2') format('woff2'), url('../public/font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to top right, #8000ff, #ffe600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'font';
+}
+
+.calculator {
+  display: grid;
+  margin: 2rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.calculator > button {
+  font-size: 3rem;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-family: 'font';
+}
+
+.calculator > button:hover,
+.calculator > button:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: #fff;
+  font-size: 2.5rem;
+}
