@@ -60,6 +60,10 @@ body {
   background-color: rgba(255, 255, 255, 0.75);
   font-family: 'font';
   color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .calculator > button:hover,
